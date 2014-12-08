@@ -6,7 +6,7 @@
 /*   By: hhismans <hhismans@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/12/08 14:00:56 by hhismans          #+#    #+#             */
-/*   Updated: 2014/12/08 16:17:15 by hhismans         ###   ########.fr       */
+/*   Updated: 2014/12/08 16:25:56 by hhismans         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 #include <termios.h>
 #include <fcntl.h>
 #include <time.h>
+#include "snake.h"
 
 int kbhit(void)
 {
@@ -48,7 +49,7 @@ int kbhit(void)
   return 0;
 }
 
-int		arrowkey(void)
+int		getarrowkey(void)
 {
 	struct termios        line_police;
 	char                  c;
@@ -102,9 +103,9 @@ int		main(void)
 	int key;
 	while (1)
 	{
-		ft_putstr("nombre generer : ");
+		ft_putstr("nombre genere : ");
 		ft_putnbr(rand_a_b(0, 10));
-		key = arrowkey();
+		key = getarrowkey();
 		ft_putstr("\nKEY = ");
 		if (key == 1)
 			ft_putendl("LEFT");

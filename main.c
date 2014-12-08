@@ -6,7 +6,7 @@
 /*   By: hhismans <hhismans@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/12/08 14:00:56 by hhismans          #+#    #+#             */
-/*   Updated: 2014/12/08 16:25:56 by hhismans         ###   ########.fr       */
+/*   Updated: 2014/12/08 16:40:04 by hhismans         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@
 #include "libft.h"
 #include <termios.h>
 #include <fcntl.h>
-#include <time.h>
 #include "snake.h"
 
 int kbhit(void)
@@ -90,11 +89,6 @@ int		getarrowkey(void)
 	return (0);
 }
 
-int rand_a_b(int a, int b)
-{
-    return rand()%(b-a) + a;
-}
-
 /*
  * Main d;exemple pour comprendre le fonctionnement de getarrowkey
  */
@@ -103,8 +97,6 @@ int		main(void)
 	int key;
 	while (1)
 	{
-		ft_putstr("nombre genere : ");
-		ft_putnbr(rand_a_b(0, 10));
 		key = getarrowkey();
 		ft_putstr("\nKEY = ");
 		if (key == 1)

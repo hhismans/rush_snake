@@ -6,7 +6,7 @@
 /*   By: hhismans <hhismans@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/12/08 14:40:19 by hhismans          #+#    #+#             */
-/*   Updated: 2014/12/08 16:17:50 by hhismans         ###   ########.fr       */
+/*   Updated: 2014/12/08 16:42:53 by hhismans         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ fichier a rendre : *.c *.h
 Ressource disponible :
 -Votre libft
 -La fonction "getarrowkey(void)" (ci-joint)
--La fonction "rand_a_b(int a, int b)" (ci-joint)
 -la fonction system("CLEAR"); (#include <stdlib.h>)
 -la fonction exit();
 
@@ -35,8 +34,6 @@ fonction int getarrowkey(void):
 	4 si l'utilisateur appuye sur  fleche de droite.
 	(cf : main d'exemple)
 
-fonction int rand_a_b(int a, int b) :
-cette fonction renvoye un nombre aleatoire compris entre a et b.
 (/!\ a < b /!\)
 Consigne :
 Le but de ce mini rush est de recoder le jeu SNAKE.
@@ -50,6 +47,8 @@ Regle du jeu:
 -le serpent est represente par des s
 -la pomme est repesente par un a
 -le serpent grandi de 1 quand il mange une pomme.
+-une fois la pomme mange, la pomme repop aleatoirement sur la map.
+(cf: google pour generer de l'aleatoire)
 -le serpent meurt quand il rencontre un #.
 ex:
 ####################################
